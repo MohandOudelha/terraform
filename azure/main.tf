@@ -77,9 +77,9 @@ resource "azurerm_windows_virtual_machine" "example" {
     }
 
     source_image_reference {
-        publisher = "MicrosoftWindowsServer"
-        offer = "WindowsServer"
-        sku = "2022-Datacenter"
+        publisher = "Debian"
+        offer = "debian-11"
+        sku = "11"
         version = "latest"
     }
 }
