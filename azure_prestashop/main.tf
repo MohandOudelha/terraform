@@ -116,6 +116,9 @@ terraform {
         admin_password = "P@$$w0rd1234!"
         #ssh_password          = "P@$$w0rd1234!"
         disable_password_authentication = false
+        identity {
+            type = "SystemAssigned"
+        }        
         network_interface_ids = [
             azurerm_network_interface.example.id,
         ]
