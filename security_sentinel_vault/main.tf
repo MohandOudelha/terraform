@@ -64,6 +64,9 @@ resource "azurerm_linux_virtual_machine" "example" {
   size                  = "Standard_B1s"
   admin_username        = "azureuser"
   admin_password        = vault_generic_secret.my-app.data.password  # Utiliser la valeur stockée dans Vault
+  identity {
+    type = "SystemAssigned"
+  }
 }
 
 # Ressource pour créer une interface réseau pour la VM
