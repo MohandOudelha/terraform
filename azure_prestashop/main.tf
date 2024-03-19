@@ -81,10 +81,10 @@ terraform {
             direction                  = "Inbound"
             access                     = "Allow"
             protocol                   = "Tcp"
-            source_port_range          = "*"
+            source_port_range          = "22"
             destination_port_range     = "22"
-            source_address_prefix      = "*"
-            destination_address_prefix = "*"
+            source_address_prefix      = "10.0.2.0"
+            destination_address_prefix = "10.0.2.0"
         }
     }
 
